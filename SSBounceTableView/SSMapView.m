@@ -8,7 +8,7 @@
 
 #import "SSMapView.h"
 
-#define TAB_HEIGHT 50.f
+#define TAB_HEIGHT 70.f
 #define TAB_WIDTH 60.f
 
 @implementation SSMapView

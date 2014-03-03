@@ -29,6 +29,8 @@
 		D24D25D518C30CD40018FC4E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D24D25D318C30CD40018FC4E /* InfoPlist.strings */; };
 		D24D25D718C30CD40018FC4E /* SSBounceTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D24D25D618C30CD40018FC4E /* SSBounceTableViewTests.m */; };
 		D24D25E118C30DF90018FC4E /* 51a837d5a18a756793.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D24D25E018C30DF90018FC4E /* 51a837d5a18a756793.jpg */; };
+		D2EA054D18C46D760079E70D /* PhotographerCoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2EA054C18C46D760079E70D /* PhotographerCoverView.xib */; };
+		D2EA055018C46D8E0079E70D /* PhotographerCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EA054F18C46D8E0079E70D /* PhotographerCoverView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,9 @@
 		D24D25D418C30CD40018FC4E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D24D25D618C30CD40018FC4E /* SSBounceTableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSBounceTableViewTests.m; sourceTree = "<group>"; };
 		D24D25E018C30DF90018FC4E /* 51a837d5a18a756793.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 51a837d5a18a756793.jpg; sourceTree = "<group>"; };
+		D2EA054C18C46D760079E70D /* PhotographerCoverView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotographerCoverView.xib; sourceTree = "<group>"; };
+		D2EA054E18C46D8E0079E70D /* PhotographerCoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotographerCoverView.h; sourceTree = "<group>"; };
+		D2EA054F18C46D8E0079E70D /* PhotographerCoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotographerCoverView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +144,9 @@
 				D23805FF18C3CC8F00CABB9C /* SSMapView.xib */,
 				D238060118C3CCAD00CABB9C /* SSMapView.h */,
 				D238060218C3CCAD00CABB9C /* SSMapView.m */,
+				D2EA054C18C46D760079E70D /* PhotographerCoverView.xib */,
+				D2EA054E18C46D8E0079E70D /* PhotographerCoverView.h */,
+				D2EA054F18C46D8E0079E70D /* PhotographerCoverView.m */,
 				D24D25C018C30CD40018FC4E /* ViewController.h */,
 				D24D25C118C30CD40018FC4E /* ViewController.m */,
 				D23805F418C31AB600CABB9C /* bouncyTableView.h */,
@@ -266,6 +274,7 @@
 				D24D25B318C30CD40018FC4E /* InfoPlist.strings in Resources */,
 				D24D25E118C30DF90018FC4E /* 51a837d5a18a756793.jpg in Resources */,
 				D238060518C4485D00CABB9C /* SwingLocalLogo-Map.png in Resources */,
+				D2EA054D18C46D760079E70D /* PhotographerCoverView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +297,7 @@
 				D24D25B918C30CD40018FC4E /* AppDelegate.m in Sources */,
 				D24D25B518C30CD40018FC4E /* main.m in Sources */,
 				D238060318C3CCAD00CABB9C /* SSMapView.m in Sources */,
+				D2EA055018C46D8E0079E70D /* PhotographerCoverView.m in Sources */,
 				D23805F618C31AB600CABB9C /* bouncyTableView.m in Sources */,
 				D23805FE18C3CBFE00CABB9C /* BouncyHeaderView.m in Sources */,
 			);

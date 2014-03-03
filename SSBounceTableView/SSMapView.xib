@@ -29,7 +29,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGk-ye-lha">
-                    <rect key="frame" x="266" y="524" width="40" height="40"/>
+                    <rect key="frame" x="264" y="522" width="40" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="3T9-zK-V3s"/>
@@ -49,10 +49,10 @@
                 <constraint firstAttribute="trailing" secondItem="N03-pU-2Fn" secondAttribute="trailing" id="8kZ-fY-z27"/>
                 <constraint firstAttribute="bottom" secondItem="N03-pU-2Fn" secondAttribute="bottom" id="ETh-X8-9ps"/>
                 <constraint firstAttribute="trailing" secondItem="wWb-S7-0z6" secondAttribute="trailing" id="FyO-Or-Rdu"/>
-                <constraint firstAttribute="trailing" secondItem="lGk-ye-lha" secondAttribute="trailing" constant="14" id="aMR-Ie-oM0"/>
+                <constraint firstAttribute="trailing" secondItem="lGk-ye-lha" secondAttribute="trailing" constant="16" id="aMR-Ie-oM0"/>
                 <constraint firstItem="wWb-S7-0z6" firstAttribute="top" secondItem="1" secondAttribute="top" id="c8D-oP-1Kd"/>
                 <constraint firstItem="wWb-S7-0z6" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="rlK-Hp-o6e"/>
-                <constraint firstAttribute="bottom" secondItem="lGk-ye-lha" secondAttribute="bottom" constant="4" id="v3w-3s-U2W"/>
+                <constraint firstAttribute="bottom" secondItem="lGk-ye-lha" secondAttribute="bottom" constant="6" id="v3w-3s-U2W"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

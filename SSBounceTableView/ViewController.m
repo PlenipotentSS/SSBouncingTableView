@@ -9,9 +9,10 @@
 #import "ViewController.h"
 #import "bouncyTableView.h"
 #import "SSMapView.h"
+#import "PhotographerCoverView.h"
 
 #define MAP_RATIO 3.f/4.f
-#define MAP_HEIGHT_OFFSET 69
+#define MAP_HEIGHT_OFFSET 74
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate>
 
@@ -23,6 +24,7 @@
 @property (nonatomic) SSMapView *mapView;
 @property (nonatomic) BOOL mapShown;
 @property (nonatomic) UITapGestureRecognizer *tableViewHideTapRecognizer;
+@property (nonatomic) PhotographerCoverView *photographyCover;
 
 @end
 
@@ -36,6 +38,7 @@
     [self setupTableView];
     [self setupCellAnimations];
     [self setupMap];
+    [self setupBackground];
     
 }
 
@@ -54,20 +57,22 @@
 }
 
 #pragma mark - setup methods
+- (void)setupBackground
+{
+    self.photographyCover = [[[NSBundle mainBundle] loadNibNamed:@"PhotographerCoverView" owner:self options:nil] objectAtIndex:0];
+    [self.photographyCover setAlpha:0.f];
+    [self.view addSubview:self.photographyCover];
+    
+}
 
 - (void)setupTableView
 {
     self.theTableView.delegate = self;
     self.theTableView.dataSource = self;
+    self.theTableView.isVisible = YES;
     self.theTableView.recognizerBlock = ^void(NSSet *view) {
         if (self.theTableView.isVisible) {
-            [UIView animateWithDuration:0.4f animations:^{
-                [self.theTableView setAlpha:0.f];
-                self.theTableView.center = CGPointMake(self.theTableView.center.x, self.theTableView.center.y-50);
-                self.mapView.center = CGPointMake(self.mapView.center.x, self.mapView.center.y-MAP_HEIGHT_OFFSET);
-            } completion:^(BOOL finished) {
-                self.theTableView.isVisible = NO;
-            }];
+            [self showBackground];
         }
     };
 }
@@ -129,29 +134,44 @@
             [self peekMap];
         } else {
             if (!self.theTableView.isVisible) {
-                if (!self.touchesMoved) {
-                    self.lastCell = 0;
-                    [self.theTableView reloadData];
-                }
-                [UIView animateWithDuration:0.4f animations:^{
-                    [self.theTableView setAlpha:1.f];
-                    self.theTableView.center = CGPointMake(self.theTableView.center.x, self.theTableView.center.y+50);
-                    self.mapView.center = CGPointMake(self.mapView.center.x, self.mapView.center.y+MAP_HEIGHT_OFFSET);
-                } completion:^(BOOL finished) {
-                    self.theTableView.isVisible = YES;
-                }];
+                [self hideBackground];
             } else {
-                [UIView animateWithDuration:0.4f animations:^{
-                    [self.theTableView setAlpha:0.f];
-                    self.theTableView.center = CGPointMake(self.theTableView.center.x, self.theTableView.center.y-50);
-                    self.mapView.center = CGPointMake(self.mapView.center.x, self.mapView.center.y-MAP_HEIGHT_OFFSET);
-                } completion:^(BOOL finished) {
-                    self.theTableView.isVisible = NO;
-                }];
+                [self showBackground];
             }
         }
     }
     [super touchesEnded:touches withEvent:event];
+}
+
+#pragma mark - Background View displaying
+- (void)hideBackground
+{
+    if (!self.touchesMoved) {
+        self.lastCell = 0;
+        [self.theTableView reloadData];
+    }
+    [UIView animateWithDuration:0.4f animations:^{
+        [self.theTableView setAlpha:1.f];
+        self.theTableView.center = CGPointMake(self.theTableView.center.x, self.theTableView.center.y+50);
+        self.mapView.center = CGPointMake(self.mapView.center.x, self.mapView.center.y+MAP_HEIGHT_OFFSET);
+        [self.photographyCover setAlpha:0.f];
+    } completion:^(BOOL finished) {
+        self.theTableView.isVisible = YES;
+    }];
+}
+
+- (void)showBackground
+{
+
+    [UIView animateWithDuration:0.4f animations:^{
+        
+        [self.theTableView setAlpha:0.f];
+        self.theTableView.center = CGPointMake(self.theTableView.center.x, self.theTableView.center.y-50);
+        self.mapView.center = CGPointMake(self.mapView.center.x, self.mapView.center.y-MAP_HEIGHT_OFFSET);
+        [self.photographyCover setAlpha:1.f];
+    } completion:^(BOOL finished) {
+        self.theTableView.isVisible = NO;
+    }];
 }
 
 #pragma mark - Map view

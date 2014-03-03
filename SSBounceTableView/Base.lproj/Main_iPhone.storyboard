@@ -29,7 +29,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seattle, WA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bA3-WK-o5V">
-                                            <rect key="frame" x="56" y="39" width="209" height="21"/>
+                                            <rect key="frame" x="61" y="39" width="209" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
                                             <color key="textColor" red="0.8980392814" green="0.89411771299999998" blue="0.80392163989999998" alpha="1" colorSpace="deviceRGB"/>
@@ -86,9 +86,29 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2cb-vO-40H">
+                                <rect key="frame" x="-1" y="32" width="55" height="35"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKz-Ut-5Jb">
+                                        <rect key="frame" x="3" y="7" width="49" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="menu">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="AVY-q8-ONM"/>
+                                    <constraint firstAttribute="height" constant="35" id="s4Z-Zj-Z1T"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2cb-vO-40H" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="-1" id="40H-KK-vOT"/>
+                            <constraint firstItem="2cb-vO-40H" firstAttribute="top" secondItem="skF-6z-eJw" secondAttribute="bottom" constant="12" id="5QC-yC-Opt"/>
                             <constraint firstItem="LRq-xI-Tsq" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="G8b-GW-vWC"/>
                             <constraint firstAttribute="trailing" secondItem="LRq-xI-Tsq" secondAttribute="trailing" id="PSe-8G-ZHv"/>
                             <constraint firstItem="LRq-xI-Tsq" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="cuE-Dd-Kie"/>
@@ -102,12 +122,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="27" y="76"/>
+            <point key="canvasLocation" x="0.0" y="49"/>
         </scene>
     </scenes>
     <resources>
         <image name="51a837d5a18a756793.jpg" width="1920" height="1440"/>
         <image name="SwingLocalLogo-Pin_circlebg.png" width="1302" height="1305"/>
+        <image name="menu" width="28" height="20"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

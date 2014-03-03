@@ -14,13 +14,31 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ve3-rO-CAn">
-                    <rect key="frame" x="278" y="526" width="22" height="22"/>
+                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ve3-rO-CAn">
+                    <rect key="frame" x="264" y="506" width="50" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="2YZ-If-cdD"/>
+                        <constraint firstAttribute="height" constant="50" id="I8Y-hP-rha"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" image="i"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZA-pn-Wp3">
+                    <rect key="frame" x="275" y="28" width="28" height="28"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="X">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="sZA-pn-Wp3" secondAttribute="trailing" constant="17" id="Dk2-Pr-Pfr"/>
+                <constraint firstItem="sZA-pn-Wp3" firstAttribute="top" secondItem="1" secondAttribute="top" constant="28" id="N9J-Hg-ywC"/>
+                <constraint firstAttribute="trailing" secondItem="ve3-rO-CAn" secondAttribute="trailing" constant="6" id="vaw-Z5-YGW"/>
+                <constraint firstAttribute="bottom" secondItem="ve3-rO-CAn" secondAttribute="bottom" constant="12" id="yrO-wT-BUS"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <connections>
@@ -28,4 +46,8 @@
             </connections>
         </view>
     </objects>
+    <resources>
+        <image name="X" width="28" height="28"/>
+        <image name="i" width="12" height="61"/>
+    </resources>
 </document>

@@ -11,7 +11,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wWb-S7-0z6">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="494"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="488"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </mapView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N03-pU-2Fn">
@@ -45,7 +45,7 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="N03-pU-2Fn" firstAttribute="top" secondItem="wWb-S7-0z6" secondAttribute="bottom" constant="19" id="0hC-gp-jfK"/>
+                <constraint firstItem="N03-pU-2Fn" firstAttribute="top" secondItem="wWb-S7-0z6" secondAttribute="bottom" constant="25" id="0hC-gp-jfK"/>
                 <constraint firstAttribute="trailing" secondItem="N03-pU-2Fn" secondAttribute="trailing" id="8kZ-fY-z27"/>
                 <constraint firstAttribute="bottom" secondItem="N03-pU-2Fn" secondAttribute="bottom" id="ETh-X8-9ps"/>
                 <constraint firstAttribute="trailing" secondItem="wWb-S7-0z6" secondAttribute="trailing" id="FyO-Or-Rdu"/>

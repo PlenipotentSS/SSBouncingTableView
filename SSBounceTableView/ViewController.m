@@ -12,7 +12,7 @@
 #import "PhotographerCoverView.h"
 
 #define MAP_RATIO 3.f/4.f
-#define MAP_HEIGHT_OFFSET 74
+#define MAP_HEIGHT_OFFSET 79
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate>
 
